@@ -1,5 +1,5 @@
 var number = 0;
-jQuery.ready(function(){
+$('body').ready(function(){
   $(document).ready(function () {
     $('.arrow').click(function () {
       $('.title').css('font-size', '30px');
