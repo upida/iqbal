@@ -1,0 +1,144 @@
+body {
+    background-color: #000000;
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+.wrapper {
+    margin: auto;
+}
+
+.content {
+    margin-top: 25%;
+}
+
+.title {
+    position: absolute;
+    top: 35%;
+    left: 28%;
+    font-size: 90px;
+    text-align: center;
+}
+
+.name-land {
+    position: relative;
+    font-family: 'Varela', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.contact-land {
+    position: absolute;
+    font-family: 'Varela', sans-serif;
+    color: #ffffff;
+    top: 5%;
+    right: 5%;
+}
+
+.contact-land:hover {
+    color: #ffcc00;
+}
+
+.arrow {
+    margin: auto;
+    margin-top: 10%;
+    width: fit-content;
+}
+
+.arrow-out {
+    width: 25px;
+    height: 25px;
+    border-top: 4px solid #ffffff;
+    border-right: 4px solid #ffffff;
+    transform: rotate(45deg);
+}
+
+.arrow-in {
+    position: relative;
+    width: 60px;
+    bottom: -75%;
+    left: -100%;
+    border-top: 4px solid #ffffff;
+    transform: rotate(135deg);
+}
+
+[class*='arrow']:hover {
+    border-color: #ffcc00;
+    cursor: pointer;
+}
+
+.arrow:hover [class*='arrow'],
+.next-show:hover [class*='arrow'] {
+    border-color: #ffcc00;
+}
+
+/* after moved page */
+.menu {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    display: none;
+    width: fit-content;
+    font-family: 'Varela', sans-serif;
+    text-align: center;
+}
+
+.sub-menu {
+    margin: 20% 0;
+    cursor: pointer;
+}
+
+.sub-menu:hover {
+    color: #ffcc00;
+}
+
+.contact {
+    width: 1px;
+    height: 35px;
+    overflow: hidden;
+    font-size: 10px;
+    text-align: center;
+    margin: 50% auto;
+    cursor: pointer;
+    border-right: 1px solid #ffffff;
+}
+
+.contact:hover {
+    overflow: visible;
+    width: 100%;
+    border-left: 1px solid #ffffff;
+    transition-duration: 0.2s;
+}
+
+/* show page */
+.title-show {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    text-align: right;
+    font-size: 100px;
+}
+
+.img-show {
+    width: 70%;
+}
+
+.item-show {
+    display: block;
+    margin: auto;
+    height: 550px;
+}
+
+.next-show {
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    font-size: 100px;
+    width: fit-content;
+}
