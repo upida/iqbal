@@ -38,19 +38,33 @@ function count(x) {
 }
 function images(page) {
   let value = 0;
+  lazyload();
   console.log(page[value]);
-  $('.item-show').attr('src', page[value]);
+  $('.item-show').attr('data-src', page[value]);
   $('.next-show').click(function () {
     $('#show').fadeOut('slow', function () {
+      lazyload();
       if (value < page.length - 1) {
         $('#show').fadeIn('slow');
         console.log((value = value + 1));
-        $('.item-show').attr('src', page[value]);
+        $('.item-show').attr('data-src', page[value]);
       } else {
         $('#show').fadeIn('slow');
         console.log((value = 0));
-        $('.item-show').attr('src', page[value]);
+        $('.item-show').attr('data-src', page[value]);
       }
     });
   });
 }
+
+function lazyload() {
+  $().ready(function () {
+    var allimages = document.getElementsByTagName('img');
+    for (var i = 0; i < allimages.length; i++) {
+      if (allimages[i].getAttribute('data-src')) {
+        allimages[i].setAttribute('src', allimages[i].getAttribute('data-src'));
+      }
+    }
+  }, false);
+}
+lazyload();
