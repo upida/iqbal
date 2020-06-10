@@ -1,5 +1,6 @@
 var number = 0;
-$(document).ready(function () {
+jQuery.ready(function (){
+  $(document).ready(function () {
   $('.arrow').click(function () {
     $('.title').css('font-size', '30px');
     $('.title').css('top', '5%');
@@ -44,4 +45,5 @@ $(document).ready(function () {
       });
     });
   });
+});
 });
