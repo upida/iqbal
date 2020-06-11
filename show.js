@@ -43,14 +43,15 @@ function images(page) {
   $('.item-show').attr('data-src', page[value]);
   $('.next-show').click(function () {
     $('#show').fadeOut('slow', function () {
-      lazyload();
       if (value < page.length - 1) {
         $('#show').fadeIn('slow');
         console.log((value = value + 1));
+        lazyload();
         $('.item-show').attr('data-src', page[value]);
       } else {
         $('#show').fadeIn('slow');
         console.log((value = 0));
+        lazyload();
         $('.item-show').attr('data-src', page[value]);
       }
     });
@@ -74,4 +75,5 @@ function lazyload() {
     }
   }, false);
 }
+
 lazyload();
