@@ -58,6 +58,13 @@ function images(page) {
 }
 
 function lazyload() {
+  document.onreadystatechange = function () {
+    if (document.readyState == 'complete') {
+      $('#loading').css('display', 'none');
+    } else if (document.readyState == 'interactive') {
+      $('#loading').css('opacity', '70%');
+    }
+  };
   $().ready(function () {
     var allimages = document.getElementsByTagName('img');
     for (var i = 0; i < allimages.length; i++) {
